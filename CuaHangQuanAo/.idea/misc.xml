@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/BTL_Phong/CuaHangQuanAo/app/src/main/res/drawable/ic_search.xml" value="0.152" />
+        <entry key="..\:/BTL_Phong/CuaHangQuanAo/app/src/main/res/layout/activity_man_hinh_chinh.xml" value="0.25416666666666665" />
+        <entry key="..\:/BTL_Phong/CuaHangQuanAo/app/src/main/res/layout/fragment_gio_hang.xml" value="0.25416666666666665" />
+        <entry key="..\:/BTL_Phong/CuaHangQuanAo/app/src/main/res/layout/fragment_trang_chu.xml" value="0.25416666666666665" />
         <entry key="..\:/LamThue/Phong/CuaHangQuanAo/app/src/main/res/drawable/bogoc.xml" value="0.193" />
         <entry key="..\:/LamThue/Phong/CuaHangQuanAo/app/src/main/res/layout/activity_dang_ky.xml" value="0.36666666666666664" />
         <entry key="..\:/LamThue/Phong/CuaHangQuanAo/app/src/main/res/layout/activity_dang_nhap.xml" value="0.25" />
