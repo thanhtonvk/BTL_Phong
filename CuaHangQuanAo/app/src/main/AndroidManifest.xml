@@ -13,6 +13,15 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".Activity.ThanhToanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.ChiTietSanPhamActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.DanhSachSanPhamActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activity.ManHinhChinhActivity"
             android:exported="false" />
         <activity

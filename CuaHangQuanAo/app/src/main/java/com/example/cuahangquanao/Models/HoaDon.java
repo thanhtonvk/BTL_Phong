@@ -1,14 +1,20 @@
 package com.example.cuahangquanao.Models;
 
 public class HoaDon {
-    private int MaHD;
-    private String DiaChi;
-    private String NgayBan;
-    private String SDT;
-    private String TenTK;
-    private String HoTen;
-    private int TongTien;
-    private int TrangThai;
+    int MaHD;
+    String TenTK;
+    String NgayBan;
+    String DiaChi;
+    String SDT;
+    int TrangThai;
+
+    public HoaDon(String tenTK, String ngayBan, String diaChi, String SDT, int trangThai) {
+        TenTK = tenTK;
+        NgayBan = ngayBan;
+        DiaChi = diaChi;
+        this.SDT = SDT;
+        TrangThai = trangThai;
+    }
 
     public int getMaHD() {
         return MaHD;
@@ -16,30 +22,6 @@ public class HoaDon {
 
     public void setMaHD(int maHD) {
         MaHD = maHD;
-    }
-
-    public String getDiaChi() {
-        return DiaChi;
-    }
-
-    public void setDiaChi(String diaChi) {
-        DiaChi = diaChi;
-    }
-
-    public String getNgayBan() {
-        return NgayBan;
-    }
-
-    public void setNgayBan(String ngayBan) {
-        NgayBan = ngayBan;
-    }
-
-    public String getSDT() {
-        return SDT;
-    }
-
-    public void setSDT(String SDT) {
-        this.SDT = SDT;
     }
 
     public String getTenTK() {
@@ -50,20 +32,28 @@ public class HoaDon {
         TenTK = tenTK;
     }
 
-    public String getHoTen() {
-        return HoTen;
+    public String getNgayBan() {
+        return NgayBan;
     }
 
-    public void setHoTen(String hoTen) {
-        HoTen = hoTen;
+    public void setNgayBan(String ngayBan) {
+        NgayBan = ngayBan;
     }
 
-    public int getTongTien() {
-        return TongTien;
+    public String getDiaChi() {
+        return DiaChi;
     }
 
-    public void setTongTien(int tongTien) {
-        TongTien = tongTien;
+    public void setDiaChi(String diaChi) {
+        DiaChi = diaChi;
+    }
+
+    public String getSDT() {
+        return SDT;
+    }
+
+    public void setSDT(String SDT) {
+        this.SDT = SDT;
     }
 
     public int getTrangThai() {
@@ -74,14 +64,12 @@ public class HoaDon {
         TrangThai = trangThai;
     }
 
-    public HoaDon(int maHD, String diaChi, String ngayBan, String SDT, String tenTK, String hoTen, int tongTien, int trangThai) {
+    public HoaDon(int maHD, String tenTK, String ngayBan, String diaChi, String SDT, int trangThai) {
         MaHD = maHD;
-        DiaChi = diaChi;
-        NgayBan = ngayBan;
-        this.SDT = SDT;
         TenTK = tenTK;
-        HoTen = hoTen;
-        TongTien = tongTien;
+        NgayBan = ngayBan;
+        DiaChi = diaChi;
+        this.SDT = SDT;
         TrangThai = trangThai;
     }
 }

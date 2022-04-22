@@ -1,12 +1,15 @@
 package com.example.cuahangquanao.Models;
 
 public class CTHoaDon {
-    private int MaCTHD;
-    private String TenSP;
-    private String HinhAnh;
-    private int GiaBan;
-    private int SoLuong;
-    private int ThanhTien;
+     int MaCTHD;
+     int MaHD;
+     int MaSP;
+     int SoLuong;
+
+    public CTHoaDon(int maSP, int soLuong) {
+        MaSP = maSP;
+        SoLuong = soLuong;
+    }
 
     public int getMaCTHD() {
         return MaCTHD;
@@ -16,28 +19,20 @@ public class CTHoaDon {
         MaCTHD = maCTHD;
     }
 
-    public String getTenSP() {
-        return TenSP;
+    public int getMaHD() {
+        return MaHD;
     }
 
-    public void setTenSP(String tenSP) {
-        TenSP = tenSP;
+    public void setMaHD(int maHD) {
+        MaHD = maHD;
     }
 
-    public String getHinhAnh() {
-        return HinhAnh;
+    public int getMaSP() {
+        return MaSP;
     }
 
-    public void setHinhAnh(String hinhAnh) {
-        HinhAnh = hinhAnh;
-    }
-
-    public int getGiaBan() {
-        return GiaBan;
-    }
-
-    public void setGiaBan(int giaBan) {
-        GiaBan = giaBan;
+    public void setMaSP(int maSP) {
+        MaSP = maSP;
     }
 
     public int getSoLuong() {
@@ -48,20 +43,10 @@ public class CTHoaDon {
         SoLuong = soLuong;
     }
 
-    public int getThanhTien() {
-        return ThanhTien;
-    }
-
-    public void setThanhTien(int thanhTien) {
-        ThanhTien = thanhTien;
-    }
-
-    public CTHoaDon(int maCTHD, String tenSP, String hinhAnh, int giaBan, int soLuong, int thanhTien) {
+    public CTHoaDon(int maCTHD, int maHD, int maSP, int soLuong) {
         MaCTHD = maCTHD;
-        TenSP = tenSP;
-        HinhAnh = hinhAnh;
-        GiaBan = giaBan;
+        MaHD = maHD;
+        MaSP = maSP;
         SoLuong = soLuong;
-        ThanhTien = thanhTien;
     }
 }

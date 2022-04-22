@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.cuahangquanao.API.ApiService;
 import com.example.cuahangquanao.R;
+import com.example.cuahangquanao.Utils.Common;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -25,6 +26,7 @@ public class DangNhapActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dang_nhap);
         anhXa();
+//        startActivity(new Intent(getApplicationContext(), ManHinhChinhActivity.class));
         findViewById(R.id.btnDangKy).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -34,7 +36,6 @@ public class DangNhapActivity extends AppCompatActivity {
         findViewById(R.id.btnDangNhap).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), ManHinhChinhActivity.class));
                 String taiKhoan = edtTaiKhoan.getText().toString();
                 String matKhau = edtMatKhau.getText().toString();
                 ProgressDialog dialog = new ProgressDialog(DangNhapActivity.this);
@@ -46,7 +47,8 @@ public class DangNhapActivity extends AppCompatActivity {
                         if (response.isSuccessful()) {
                             dialog.dismiss();
                             if (response.body()) {
-
+                                Common.tenTK = taiKhoan;
+                                startActivity(new Intent(getApplicationContext(), ManHinhChinhActivity.class));
                             } else {
                                 Toast.makeText(getApplicationContext(), "Tài khoản hoặc mật khẩu không chính xác", Toast.LENGTH_LONG).show();
                             }

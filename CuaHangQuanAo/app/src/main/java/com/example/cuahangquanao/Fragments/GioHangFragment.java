@@ -1,66 +1,47 @@
 package com.example.cuahangquanao.Fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+
+import com.example.cuahangquanao.Activity.ThanhToanActivity;
+import com.example.cuahangquanao.Adapters.GioHangAdapter;
 import com.example.cuahangquanao.R;
+import com.example.cuahangquanao.Utils.Common;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link GioHangFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class GioHangFragment extends Fragment {
-
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public GioHangFragment() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment GioHangFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static GioHangFragment newInstance(String param1, String param2) {
-        GioHangFragment fragment = new GioHangFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_gio_hang, container, false);
+    }
+
+    GioHangAdapter adapter;
+    ListView lv;
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        lv = view.findViewById(R.id.lv_sanpham);
+        adapter = new GioHangAdapter(getContext());
+        lv.setAdapter(adapter);
+        view.findViewById(R.id.btnDatHang).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (Common.gioHangList != null) {
+                    startActivity(new Intent(getContext(), ThanhToanActivity.class));
+                }
+            }
+        });
     }
 }

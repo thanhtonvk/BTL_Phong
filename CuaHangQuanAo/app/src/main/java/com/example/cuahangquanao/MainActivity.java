@@ -7,7 +7,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.cuahangquanao.Activity.DangNhapActivity;
 
+import org.lucasr.twowayview.TwoWayView;
+
 public class MainActivity extends AppCompatActivity {
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
